@@ -221,6 +221,6 @@ macOS 10.10 (Yosemite) and newer versions][electron-supported-platforms].
 [rufus]: https://rufus.akeo.ie
 [unetbootin]: https://unetbootin.github.io
 [windows-iot-dashboard]: https://developer.microsoft.com/en-us/windows/iot/downloads
-[woeusb]: https://github.com/slacka/WoeUSB
+[woeusb]: https://github.com/WoeUSB/WoeUSB
 
 See [PUBLISHING](/docs/PUBLISHING.md) for more details about release types.
