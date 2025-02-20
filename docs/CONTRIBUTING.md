@@ -39,7 +39,7 @@ You might need to run this with `sudo` or administrator permissions.
     **NOTE:** Visual Studio doesn't install C++ by default. You have to rerun the
     setup, select "Modify" and then check `Visual C++ -> Common Tools for Visual
     C++` (see http://stackoverflow.com/a/31955339)
-- [MinGW](http://www.mingw.org)
+- [MinGW](https://sourceforge.net/projects/mingw/)
 
 You might need to `npm config set msvs_version 2019` for node-gyp to correctly detect
 the version of Visual Studio you're using (in this example VS2019).
