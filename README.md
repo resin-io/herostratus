@@ -98,6 +98,28 @@ choco install etcher
 ```sh
 choco uninstall etcher
 ```
+#### Scoop (Windows (PowerShell))
+
+This package is maintained by Scoop Extras Bucket, and is kept up to date automatically.
+
+```sh
+scoop bucket add extras ( scoop installs git for buckets control)
+scoop update
+scoop install etcher
+```
+ 
+ #### Scoop Update Etcher (2 Methods) (Windows (PowerShell))
+ ```sh
+ scoop update (for update repository in buckets)
+ First Method (Updates Etcher Only): scoop update etcher
+ Second Method (Updates All Scoop Packages including Extcher): scoop update *
+ ```
+ 
+##### Uninstall
+
+```sh
+scoop uninstall etcher
+```
 
 ## Support
 
