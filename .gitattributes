@@ -62,7 +62,3 @@ CODEOWNERS text
 *.ttf binary diff=hex
 xz-without-extension binary diff=hex
 wmic-output.txt binary diff=hex
-
-# gitsecret
-*.secret binary
-.gitsecret/** binary
