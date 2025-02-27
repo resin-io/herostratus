@@ -1,0 +1,162 @@
+const translation = {
+	translation: {
+		continue: 'Fortsetzen',
+		ok: 'OK',
+		cancel: 'Abbrechen',
+		skip: 'Überspringen',
+		sure: "Ja, ich bin sicher",
+		warning: 'WARNUNG! ',
+		attention: 'Achtung',
+		failed: 'Fehlgeschlagen',
+		completed: 'Abgeschlossen',
+		yesContinue: 'Ja, fortsetzen',
+		reallyExit: 'Bist du sicher, dass du Etcher schließen möchtest?',
+		yesExit: 'Ja, beenden',
+		progress: {
+			starting: 'Wird gestartet...',
+			decompressing: 'Wird dekomprimiert...',
+			flashing: 'Wird geflasht...',
+			finishing: 'Wird fertiggestellt...',
+			verifying: 'Wird validiert...',
+			failing: 'Fehlgeschlagen',
+		},
+		message: {
+			sizeNotRecommended: 'Nicht empfohlen',
+			tooSmall: 'Zu klein',
+			locked: 'Gesperrt',
+			system: 'Systemlaufwerk',
+			containsImage: 'Quelllaufwerk',
+			largeDrive: 'Großes Laufwerk',
+			sourceLarger: 'Die ausgewählte Quelle ist {{byte}} größer als dieses Laufwerk.',
+			flashSucceed_one: 'Erfolgreiches Ziel',
+			flashSucceed_other: 'Erfolgreiche Ziele',
+			flashFail_one: 'Fehlgeschlagenes Ziel',
+			flashFail_other: 'Fehlgeschlagene Ziele',
+			toDrive: 'auf {{description}} ({{name}})',
+			toTarget_one: 'auf {{num}} Ziel',
+			toTarget_other: 'auf {{num}} Ziele',
+			andFailTarget_one: 'und konnte nicht auf {{num}} Ziel geflasht werden',
+			andFailTarget_other: 'und konnte nicht auf {{num}} Ziele geflasht werden',
+			succeedTo: '{{name}} wurde erfolgreich geflasht {{target}}',
+			exitWhileFlashing:
+				'Du flashst gerade ein Laufwerk. Das Schließen von Etcher könnte dein Laufwerk in einen unbrauchbaren Zustand versetzen.',
+			looksLikeWindowsImage:
+				'Es sieht so aus, als würdest du versuchen, ein Windows-Abbild zu brennen.\n\nIm Gegensatz zu anderen Abbildern erfordern Windows-Abbilder eine spezielle Verarbeitung, um bootfähig zu werden. Wir empfehlen dir, ein speziell für diesen Zweck entwickeltes Werkzeug zu verwenden, wie <a href="https://rufus.akeo.ie">Rufus</a> (Windows), <a href="https://github.com/slacka/WoeUSB">WoeUSB</a> (Linux) oder Boot Camp Assistant (macOS).',
+			image: 'Abbild',
+			drive: 'Laufwerk',
+			missingPartitionTable:
+				'Es sieht so aus, als wäre dies kein bootfähiges {{type}}.\n\nDas {{type}} scheint keine Partitionstabelle zu enthalten und wird möglicherweise von deinem Gerät nicht erkannt oder ist nicht bootfähig.',
+			largeDriveSize:
+				"Dies ist ein großes Laufwerk! Stelle sicher, dass es keine Dateien enthält, die du behalten möchtest.",
+			systemDrive:
+				'Die Auswahl deines Systemlaufwerks ist gefährlich und wird dein Laufwerk löschen!',
+			sourceDrive: 'Enthält das Abbild, das du zum Flashen ausgewählt hast',
+			noSpace:
+				'Nicht genug Platz auf dem Laufwerk. Bitte lege ein größeres ein und versuche es erneut.',
+			genericFlashError:
+				'Etwas ist schiefgelaufen. Wenn es sich um ein komprimiertes Abbild handelt, überprüfe bitte, ob das Archiv nicht beschädigt ist.\n{{error}}',
+			validation:
+				'Der Schreibvorgang wurde erfolgreich abgeschlossen, aber Etcher hat beim Zurücklesen des Abbilds vom Laufwerk eine mögliche Beschädigung festgestellt. \n\nBitte denke darüber nach, das Abbild auf ein anderes Laufwerk zu schreiben.',
+			openError:
+				'Beim Öffnen von {{source}} ist etwas schiefgelaufen.\n\nFehler: {{error}}',
+			flashError: 'Beim Schreiben von {{image}} {{targets}} ist etwas schiefgelaufen.',
+			unplug:
+				"Es sieht so aus, als hätte Etcher den Zugriff auf das Laufwerk verloren. Wurde es versehentlich ausgesteckt? \n\nManchmal wird dieser Fehler durch fehlerhafte Lesegeräte verursacht, die keinen stabilen Zugriff auf das Laufwerk ermöglichen.",
+			cannotWrite:
+				'Es sieht so aus, als ob Etcher nicht in der Lage ist, in diesen Bereich des Laufwerks zu schreiben. Dieser Fehler wird normalerweise durch ein fehlerhaftes Laufwerk, Lesegerät oder einen fehlerhaften Anschluss verursacht. \n\nBitte versuche es noch einmal mit einem anderen Laufwerk, Lesegerät oder Anschluss.',
+			childWriterDied:
+				'Der Schreibprozess endete unerwartet. Bitte versuche es erneut und kontaktiere das Etcher-Team, falls das Problem weiterhin besteht.',
+			badProtocol: 'Es werden nur http:// und https:// URLs unterstützt.',
+		},
+		target: {
+			selectTarget: 'Ziel auswählen',
+			plugTarget: 'Ziellaufwerk anschließen',
+			targets: 'Ziele',
+			change: 'Ändern',
+		},
+		source: {
+			useSourceURL: 'Abbild-URL verwenden',
+			auth: 'Authentifizierung',
+			username: 'Benutzername eingeben',
+			password: 'Passwort eingeben',
+			unsupportedProtocol: 'Nicht unterstütztes Protokoll',
+			windowsImage: 'Mögliches Windows-Abbild erkannt',
+			partitionTable: 'Fehlende Partitionstabelle',
+			errorOpen: 'Fehler beim Öffnen der Quelle',
+			fromFile: 'Von Datei flashen',
+			fromURL: 'Von URL flashen',
+			clone: 'Laufwerk klonen',
+			image: 'Abbild',
+			name: 'Name: ',
+			path: 'Pfad: ',
+			selectSource: 'Quelle auswählen',
+			plugSource: 'Quelllaufwerk anschließen',
+			osImages: 'BS-Abbilder',
+			allFiles: 'Alle',
+			enterValidURL: 'Eine gültige URL eingeben',
+		},
+		drives: {
+			name: 'Name',
+			size: 'Größe',
+			location: 'Ort',
+			find: '{{length}} gefunden',
+			select: '{{select}} auswählen',
+			showHidden: '{{num}} Versteckte(s) anzeigen',
+			systemDriveDanger:
+				'Die Auswahl deines Systemlaufwerks ist gefährlich und wird dein Laufwerk löschen!',
+			openInBrowser: '`Etcher wird {{link}} in deinem Browser öffnen`',
+			changeTarget: 'Ziel ändern',
+			largeDriveWarning: 'Du bist dabei, ein ungewöhnlich großes Laufwerk zu löschen ',
+			largeDriveWarningMsg:
+				'Bist du sicher, dass das ausgewählte Laufwerk kein Datenaufbewahrungslaufwerk ist?',
+			systemDriveWarning: "Du bist dabei, die Laufwerke deines Computers zu löschen",
+			systemDriveWarningMsg:
+				'Bist du sicher, dass du dein Systemlaufwerk flashen möchtest?',
+		},
+		flash: {
+			another: 'Anderes flashen',
+			target: 'Ziel',
+			location: 'Ort',
+			error: 'Fehler',
+			flash: 'Flashen',
+			flashNow: 'Flashen!',
+			skip: 'Validierung wurde übersprungen',
+			moreInfo: 'weitere Infos',
+			speedTip:
+				'Die Geschwindigkeit wird berechnet, indem die Größe des Abbilds durch die Flash-Zeit geteilt wird.\nFestplattenabbilder mit ext-Partitionen werden schneller geflasht, da wir in der Lage sind, ungenutzte Bestandteile zu überspringen.',
+			speed: 'Effektive Geschwindigkeit: {{speed}} MB/s',
+			speedShort: '{{speed}} MB/s',
+			eta: 'ETA: {{eta}}',
+			failedTarget: 'Fehlgeschlagene Ziele',
+			failedRetry: 'Fehlgeschlagene Ziele wiederholen',
+			flashFailed: 'Flashen fehlgeschlagen.',
+			flashCompleted: 'Flashen abgeschlossen!',
+		},
+		settings: {
+			errorReporting:
+				'Fehler und Nutzungsstatistiken anonym an balena.io melden',
+			autoUpdate: 'Automatische Aktualisierungen aktiviert',
+			settings: 'Einstellungen',
+			systemInformation: 'Systeminformationen',
+			trimExtPartitions:
+				'Nicht zugewiesenen Speicherplatz auf Roh-Abbildern (in Partitionen vom Typ ext) kürzen',
+		},
+		menu: {
+			edit: 'Bearbeiten',
+			view: 'Ansicht',
+			devTool: 'Entwicklerwerkzeuge umschalten',
+			window: 'Fenster',
+			help: 'Hilfe',
+			pro: 'Etcher Pro',
+			website: 'Etcher Website',
+			issue: 'Ein Problem melden',
+			about: 'Über Etcher',
+			hide: 'Etcher ausblenden',
+			hideOthers: 'Andere ausblenden',
+			unhide: 'Alle einblenden',
+			quit: 'Etcher beenden',
+		},
+	},
+};
+
+export default translation;
