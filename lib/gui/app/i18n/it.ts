@@ -1,0 +1,162 @@
+const translation = {
+	translation: {
+		continue: 'Continua',
+		ok: 'OK',
+		cancel: 'Annulla',
+		skip: 'Ignora',
+		sure: "Si, sono sicuro",
+		warning: 'AVVISO! ',
+		attention: 'Attenzione',
+		failed: 'Fallito',
+		completed: 'Completato',
+		yesContinue: 'Sì, continua',
+		reallyExit: 'Sei sicuro di voler chiudere Etcher?',
+		yesExit: 'Si, chiudi',
+		progress: {
+			starting: 'Avvio...',
+			decompressing: 'Decompressione...',
+			flashing: 'Scrittura...',
+			finishing: 'Completamento...',
+			verifying: 'Validazione...',
+			failing: 'Fallito',
+		},
+		message: {
+			sizeNotRecommended: 'Non consigliato',
+			tooSmall: 'Troppo piccolo',
+			locked: 'Bloccato',
+			system: 'Unità sistema',
+			containsImage: 'Unità sorgente',
+			largeDrive: 'Unità grande',
+			sourceLarger: 'La sorgente selezionata è {{byte}} più grande di questa unità.',
+			flashSucceed_one: 'Destinazione completata',
+			flashSucceed_other: 'Destinazioni completate',
+			flashFail_one: 'Destinazione fallita',
+			flashFail_other: 'Destinazioni completate',
+			toDrive: 'a {{description}} ({{name}})',
+			toTarget_one: 'a {{num}} destinazione',
+			toTarget_other: 'a {{num}} destinazioni',
+			andFailTarget_one: 'e non è stato possibile eseguire la scrittura in {{num}} destinaizone',
+			andFailTarget_other: 'e non è stato possibile eseguire la scrittura in {{num}} destinaizoni',
+			succeedTo: '{{name}} è stato correttamente scritto in {{target}}',
+			exitWhileFlashing:
+				"Stai eseguendo la scrittura di un'unità.\nLa chiusura di Etcher potrebbe lasciare l'unità in uno stato  non utilizzabile.",
+			looksLikeWindowsImage:
+				'Sembra che stai tentando di masterizzare una immagine Windows.\n\nA differenza di altre immagini disco, le immagini disco Windows richiedono una elaborazione speciale per essere rese avviabili.\nTi suggeriamo di usare uno strumento appositamente progettato per questo scopo, come ad esempio <a href="https://rufus.akeo.ie">Rufus</a> (Windows), <a href="https://github.com/slacka/WoeUSB">WoeUSB</a> (Linux), o Boot Camp Assistant (macOS).',
+			image: 'immagine',
+			drive: 'unità',
+			missingPartitionTable:
+				'Sembra che questo non sia avviabile {{type}}.\n\nIl {{type}} non sembra contenere una tabella delle partizioni e potrebbe non essere riconosciuto o avviabile dal dispositivo.',
+			largeDriveSize:
+				"Questo è una unità grande!\nAssicurati che non contenga file che vuoi conservare.",
+			systemDrive:
+				"Selezionare l'unità di sistema è pericoloso e cancellerà l'unità!",
+			sourceDrive: "Contiene l'immagine che hai scelto di scrivere",
+			noSpace:
+				"Spazio insufficiente nell'unità.\nUsa una unità più grande e riprova.",
+			genericFlashError:
+				"Si è verificato un errore.\nSe si tratta di un'immagine compressa, controlla che l'archivio non sia danneggiato.\n{{error}}",
+			validation:
+				"La scrittura è stata completata correttamente ma Etcher ha rilevato potenziali problemi di corruzione durante la rilettura dell'immagine dall'unità.\n\nTi consigliamo di scrivere l'immagine in un'unità diversa.",
+			openError:
+				"Si è verificato un errore durante l'apertura di {{source}}.\n\nErrore: {{error}}",
+			flashError: 'Si è verificato un errore durante la scrittura di {{image}} {{targets}}.',
+			unplug:
+				"Sembra che Etcher abbia perso l'accesso al disco.\nSi è scollegato accidentalmente?\n\nA volte questo errore è causato da lettori difettosi che non forniscono un accesso stabile all'unità.",
+			cannotWrite:
+				"Sembra che Etcher non sia in grado di scrivere in questa percorso dell'unità.\nQuesto errore è solitamente causato da un'unità, un lettore o una porta difettosa.\n\nRiprova con un'altra unità, lettore o porta.",
+			childWriterDied:
+				'Il processo di scrittura si è concluso inaspettatamente.\nRiprova e se il problema persiste contatta il team di Etcher.',
+			badProtocol: 'Sono supportate solo URL http:// e https://.',
+		},
+		target: {
+			selectTarget: 'Seleziona destinazione',
+			plugTarget: 'Collega unità destinazione',
+			targets: 'destinazioni',
+			change: 'Modifica',
+		},
+		source: {
+			useSourceURL: 'Usa URL immagine',
+			auth: 'Autenticazione',
+			username: 'Inserire utente',
+			password: 'Inserisci password',
+			unsupportedProtocol: 'Protocollo non supportato',
+			windowsImage: 'Rilevata possibile immagine Windows',
+			partitionTable: 'Tabella partizioni mancante',
+			errorOpen: 'Errore apertura sorgente',
+			fromFile: 'Scrive da file',
+			fromURL: 'Scrivi da URL',
+			clone: 'Clona unità',
+			image: 'Immagine',
+			name: 'Nome: ',
+			path: 'Percorso: ',
+			selectSource: 'Seleziona sorgente',
+			plugSource: 'Collega unità sorgente',
+			osImages: 'Immagini SO',
+			allFiles: 'Tutti',
+			enterValidURL: 'Inserisci una URL valida',
+		},
+		drives: {
+			name: 'Nome',
+			size: 'Dim.',
+			location: 'Percorso',
+			find: 'trovato {{length}}',
+			select: 'Seleziona {{select}}',
+			showHidden: 'Visualizza {{num}} nascosto',
+			systemDriveDanger:
+				"Selezionare l'unità di sistema è pericoloso e cancellerà l'unità!",
+			openInBrowser: '`Etcher aprirà {{link}} nel browser`',
+			changeTarget: 'Modifica destinazione',
+			largeDriveWarning: "Stai per cancellare un'unità insolitamente grande",
+			largeDriveWarningMsg:
+				"Sei sicuro che l'unità selezionata non sia un'unità di archiviazione?",
+			systemDriveWarning: "Stai per cancellare le unità del computer",
+			systemDriveWarningMsg:
+				"Sei sicuro di voler eseguire la scrittura dell'unità di sistema?",
+		},
+		flash: {
+			another: 'Scrivi altra',
+			target: 'Destinazione',
+			location: 'Percorso',
+			error: 'Errore',
+			flash: 'Scrivi',
+			flashNow: 'Scrivi!',
+			skip: 'La convalida è stata saltata',
+			moreInfo: 'altre info',
+			speedTip:
+				"La velocità viene calcolata dividendo la dimensione dell'immagine per il tempo di scrittura.\nLe immagini disco con partizioni EXT vengono scritte più velocemente poiché è possibile saltare le parti non usate.',
+			speed: 'Velocità effettiva: {{speed}} MB/s',
+			speedShort: '{{speed}} MB/s',
+			eta: 'STIMATO: {{eta}}',
+			failedTarget: 'Destinazioni fallite',
+			failedRetry: 'Riprova destinazione non riuscite',
+			flashFailed: 'Scrittura fallita.',
+			flashCompleted: 'Scrittura completata!',
+		},
+		settings: {
+			errorReporting:
+				'Segnala in forma anonima errori e statistiche di uso a balena.io',
+			autoUpdate: 'Aggiornamenti automatici abilitati',
+			settings: 'Impostazioni',
+			systemInformation: 'Info sistema',
+			trimExtPartitions:
+				'Taglia spazio non allocato nelle immagini RAW (partizioni di tipo EXT)',
+		},
+		menu: {
+			edit: 'Modifica',
+			view: 'Visualizza',
+			devTool: 'Abilita/disabilita strumenti sviluppatore',
+			window: 'Finestra',
+			help: 'Aiuto',
+			pro: 'Etcher Pro',
+			website: 'Sito web Etcher',
+			issue: 'Segnala problema',
+			about: 'Info su Etcher',
+			hide: 'Nascondi Etcher',
+			hideOthers: 'Nascondi altri',
+			unhide: 'Visualizza tutti',
+			quit: 'Esci da Etcher',
+		},
+	},
+};
+
+export default translation;
