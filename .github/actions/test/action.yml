@@ -69,6 +69,11 @@ runs:
         # https://www.electronjs.org/docs/latest/api/environment-variables
         ELECTRON_NO_ATTACH_CONSOLE: 'true'
 
+    - name: Create SBOM with CycloneDX
+      uses: CycloneDX/gh-node-module-generatebom@v1
+      with:
+        output: ${{ runner.temp }}/sbom.xml
+
     - name: Compress custom source
       if: runner.os != 'Windows'
       shell: bash
