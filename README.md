@@ -99,6 +99,22 @@ choco install etcher
 choco uninstall etcher
 ```
 
+#### Scoop (Windows)
+
+This package is maintained by [@ScoopInstaller](https://github.com/ScoopInstaller), and
+is kept up to date automatically.
+
+```sh
+scoop bucket add extras
+scoop install extras/etcher
+```
+
+##### Uninstall
+
+```sh
+scoop uninstall etcher
+```
+
 ## Support
 
 If you're having any problem, please [raise an issue][newissue] on GitHub, and
