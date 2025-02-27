@@ -1,0 +1,162 @@
+const translation = {
+	translation: {
+		continue: 'Fortfahren',
+		ok: 'OK',
+		cancel: 'Abbrechen',
+		skip: 'Überspringen',
+		sure: "Ja, ich bin mir sicher",
+		warning: 'WARNUNG! ',
+		attention: 'ACHTUNG!',
+		failed: 'Fehlgeschlagen',
+		completed: 'Fertiggestellt',
+		yesContinue: 'Ja, fahre weiter',
+		reallyExit: 'Bist du dir sicher, dass du Etcher schließen möchtest?',
+		yesExit: 'Ja, schließen',
+		progress: {
+			starting: 'Starten...',
+			decompressing: 'Dekomprimieren...',
+			flashing: 'Flashen...',
+			finishing: 'Fertigstellen...',
+			verifying: 'Verifizieren...',
+			failing: 'Fehlgeschlagen',
+		},
+		message: {
+			sizeNotRecommended: 'Nicht empfohlen',
+			tooSmall: 'Zu klein',
+			locked: 'Locked',
+			system: 'System Laufwerk',
+			containsImage: 'Quelllaufwerk',
+			largeDrive: 'Großes Laufwerk',
+			sourceLarger: 'Der verwendete Datenträger ist {{byte}} bytes größer wie dieser Datenträger.',
+			flashSucceed_one: 'Erfolgreiches Ziel',
+			flashSucceed_other: 'Erfolgreiche Ziele',
+			flashFail_one: 'Fehlgeschlagenes Ziel',
+			flashFail_other: 'Fehlgeschlagene Ziele',
+			toDrive: 'zu {{description}} ({{name}})',
+			toTarget_one: 'zu {{num}} target',
+			toTarget_other: 'zu {{num}} targets',
+			andFailTarget_one: 'fehlgeschlagen bis nach {{num}} zu flashen',
+			andFailTarget_other: 'fehlgeschlagen bis nach {{num}} zu flashen',
+			succeedTo: '{{name}} wurde erfolgreich geflasht {{target}}',
+			exitWhileFlashing:
+				'Du flashest gerade einen Datenträger. Das Schließen von Etcher kann deinen Datenträger in einen unbenutzbaren Zustand bringen.',
+			looksLikeWindowsImage:
+				'Es sieht so aus, als würdest du eine Windows-Image flashen.\n\nAnders als andere Images benötigen Windows-Images eine spezielle Verarbeitung, um bootfähig zu sein. Wir empfehlen dir eine speziell für diesen Zweck entwickelte Software, wie z.B. <a href="https://rufus.akeo.ie">Rufus</a> (Windows), <a href="https://github.com/slacka/WoeUSB">WoeUSB</a> (Linux), oder Boot Camp Assistant (macOS).',
+			image: 'Bild',
+			drive: 'Laufwerk',
+			missingPartitionTable:
+				'Es sieht so aus, als wäre dies kein bootfähiges {{type}}.\n\nDas {{type}} scheint keine Partitionstabelle zu enthalten und wird möglicherweise nicht von deinem Gerät erkannt oder bootfähig sein.',
+			largeDriveSize:
+				"Dies ist ein großes Laufwerk! Stellen sicher, dass es keine Dateien enthält, die du behalten möchtest.",
+			systemDrive:
+				'Das Auswählen deines Systemlaufwerks ist gefährlich und wird dein Laufwerk löschen!',
+			sourceDrive: 'Enthält das Bild, das du flashen möchtest',
+			noSpace:
+				'Nicht genug Platz auf dem Laufwerk. Bitte füge ein größeres Laufwerk ein und versuche es erneut.',
+			genericFlashError:
+				'Etwas ist schief gelaufen. Wenn es sich um ein komprimiertes Bild handelt, stellen sicher, dass das Archiv nicht beschädigt ist.\n{{error}}',
+			validation:
+				'Die Schreibung wurde erfolgreich abgeschlossen, aber Etcher hat potenzielle Korruptionsprobleme bemerkt, als es das Bild von dem Laufwerk wieder ausgelesen hat. \n\nBitte schreibe das Bild auf ein anderes Laufwerk.',
+			openError:
+				'Etwas ist schief gelaufen, als ich versuchte {{source}} zu öffnen.\n\nFehler: {{error}}',
+			flashError: 'Etwas ist schief gelaufen, als ich versuchte {{image}} {{targets}} zu flashen.',
+			unplug:
+				"Etwas ist schief gelaufen, als ich versuchte das Laufwerk zu öffnen. Hat es versehentlich abgezogen?\n\nManchmal ist dieser Fehler auf defekte Lesegeräte zurückzuführen, die keinen stabilen Zugriff auf das Laufwerk gewährleisten.",
+			cannotWrite:
+				'Etcher scheint nicht in der Lage zu sein, diesen Ort des Laufwerks zu schreiben. Dieser Fehler ist in der Regel auf defekte Laufwerke, Lesegeräte oder Ports zurückzuführen. \n\nBitte versuche es erneut mit einem anderen Laufwerk, Lesegerät oder Port.',
+			childWriterDied:
+				'Der Writer-Prozess ist unerwartet beendet. Bitte versuche es erneut, und kontaktiere die Etcher-Team, falls das Problem besteht.',
+			badProtocol: 'Nur http:// und https:// URLs werden unterstützt.',
+		},
+		target: {
+			selectTarget: 'Ziel auswählen',
+			plugTarget: 'Ziellaufwerk einsetzen',
+			targets: 'Ziele',
+			change: 'Ändern',
+		},
+		source: {
+			useSourceURL: 'Bild-URL verwenden',
+			auth: 'Authentifizierung',
+			username: 'Benutzername eingeben',
+			password: 'Passwort eingeben',
+			unsupportedProtocol: 'Nicht unterstütztes Protokoll',
+			windowsImage: 'Mögliches Windows-Bild erkannt',
+			partitionTable: 'Fehlende Partitionstabelle',
+			errorOpen: 'Fehler beim Öffnen des Quell-Laufwerks',
+			fromFile: 'Bild von Datei flashen',
+			fromURL: 'Bild von URL flashen',
+			clone: 'Laufwerk klonen',
+			image: 'Bild',
+			name: 'Name: ',
+			path: 'Pfad: ',
+			selectSource: 'Quell-Laufwerk auswählen',
+			plugSource: 'Quell-Laufwerk einsetzen',
+			osImages: 'OS-Bilder',
+			allFiles: 'Alle Dateien',
+			enterValidURL: 'Gültige URL eingeben',
+		},
+		drives: {
+			name: 'Name',
+			size: 'Größe',
+			location: 'Standort',
+			find: '{{length}} gefunden',
+			select: '{{select}} auswählen',
+			showHidden: '{{num}} versteckte anzeigen',
+			systemDriveDanger:
+				'Das Auswählen deines Systemlaufwerks ist gefährlich und wird dein Laufwerk löschen!',
+			openInBrowser: '`Etcher will {{link}} in deinem Browser öffnen`',
+			changeTarget: 'Ziel ändern',
+			largeDriveWarning: 'Du bist dabei ein ungewöhnlich großes Laufwerk zu löschen',
+			largeDriveWarningMsg:
+				'Bist du sicher, dass das ausgewählte Laufwerk kein Speicherlaufwerk ist?',
+			systemDriveWarning: "Du bist dabei dein Computer-Laufwerk zu löschen",
+			systemDriveWarningMsg:
+				'Bist du sicher, dass du dein Systemlaufwerk flashen möchtest?',
+		},
+		flash: {
+			another: 'Noch einmal flashen',
+			target: 'Ziel',
+			location: 'Standort',
+			error: 'Fehler',
+			flash: 'Flashen',
+			flashNow: 'Flashen!',
+			skip: 'Validierung wurde übersprungen',
+			moreInfo: 'mehr info',
+			speedTip:
+				'Die Geschwindigkeit wird berechnet, indem die Bildgröße durch die Flashing-Zeit dividiert wird.\nDisk-Images mit ext-Typ-Partitionen flashen schneller, da wir die ungenutzten Teile überspringen können.',
+			speed: 'Effektive Geschwindigkeit: {{speed}} MB/s',
+			speedShort: '{{speed}} MB/s',
+			eta: 'ETA: {{eta}}',
+			failedTarget: 'Fehlgeschlagene Ziele',
+			failedRetry: 'Fehlgeschlagene Ziele erneut versuchen',
+			flashFailed: 'Flashen fehlgeschlagen.',
+			flashCompleted: 'Flashen abgeschlossen!',
+		},
+		settings: {
+			errorReporting:
+				'Fehler und Nutzungsstatistiken anonym melden',
+			autoUpdate: 'Auto-updates aktiviert',
+			settings: 'Einstellungen',
+			systemInformation: 'System Information',
+			trimExtPartitions:
+				'Unbelegte Speicherplätze auf Rohbildern (in ext-Typ-Partitionen) entfernen',
+		},
+		menu: {
+			edit: 'Bearbeiten',
+			view: 'Anzeigen',
+			devTool: 'Entwicklertools aktivieren',
+			window: 'Fenster',
+			help: 'Hilfe',
+			pro: 'Etcher Pro',
+			website: 'Etcher Website',
+			issue: 'Fehler melden',
+			about: 'About Etcher',
+			hide: 'Hide Etcher',
+			hideOthers: 'Hide Others',
+			unhide: 'Unhide All',
+			quit: 'Etcher schließen',
+		},
+	},
+};
+
+export default translation;
