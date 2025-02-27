@@ -1,0 +1,162 @@
+const translation = {
+	translation: {
+		continue: 'Continue',
+		ok: 'OK',
+		cancel: 'Cancelar',
+		skip: 'Pular',
+		sure: "Sim, tenho certeza",
+		warning: 'CUIDADO! ',
+		attention: 'Atenção',
+		failed: 'Falhou',
+		completed: 'Completo',
+		yesContinue: 'Sim, continue',
+		reallyExit: 'Tem certeza de que quer fechar o Etcher?',
+		yesExit: 'Sim, saia',
+		progress: {
+			starting: 'Começando...',
+			decompressing: 'Descomprimindo...',
+			flashing: 'Flashing...',
+			finishing: 'Finalizando...',
+			verifying: 'Validando...',
+			failing: 'Falhou',
+		},
+		message: {
+			sizeNotRecommended: 'Não recomendado',
+			tooSmall: 'Muito pequeno',
+			locked: 'Bloqueado',
+			system: 'Unidade do sistema',
+			containsImage: 'Unidade fonte',
+			largeDrive: 'Unidade grande',
+			sourceLarger: 'A fonte selecionada é {{byte}} maior do que essa unidade.',
+			flashSucceed_one: 'Alvo bem sucedido',
+			flashSucceed_other: 'Alvos bem sucedidos',
+			flashFail_one: 'Alvo falhou',
+			flashFail_other: 'Alvos falharam',
+			toDrive: 'para {{description}} ({{name}})',
+			toTarget_one: 'para {{num}} alvo',
+			toTarget_other: 'para {{num}} alvos',
+			andFailTarget_one: 'e falhou em fazer o flash no {{num}} alvo',
+			andFailTarget_other: 'e falhou em fazer o flash nos {{num}} alvos',
+			succeedTo: '{{name}} foi  bem sucedido em fazer o flash em {{target}}',
+			exitWhileFlashing:
+				'Você está atualmente fazendo flash em uma unidade. Fechar o Etcher pode deixar a unidade em um estado inutilizável.',
+			looksLikeWindowsImage:
+				'Parece que você está tentado gravar uma imagem do Windows.\n\nAo contrário de outras imagens, imagens do Windows requerem um processamento especial para serem inicializáveis. Nós sugerimos que você use uma ferramento especialmente feita para esse propósito, como <a href="https://rufus.akeo.ie">Rufus</a> (Windows), <a href="https://github.com/slacka/WoeUSB">WoeUSB</a> (Linux), ou Boot Camp Assistant (macOS).',
+			image: 'imagem',
+			drive: 'unidade',
+			missingPartitionTable:
+				'Parece que isso não é inicializável {{type}}.\n\nO {{type}} parece não conter uma tabela de partição, e pode não ser reconhecida ou iniciável pelo seu dispositivo.',
+			largeDriveSize:
+				"Essa é uma grande unidade! Tenha certeza de que ela não contém arquivos que você queira manter.",
+			systemDrive:
+				'Selecionar a unidade do seu sistema pode ser perigoso e vai apagar a sua unidade!',
+			sourceDrive: 'Contém a imagem que você escolheu para fazer flash',
+			noSpace:
+				'Espaço na unidade insuficiente. Por favor, insira uma maior e tente novamente.',
+			genericFlashError:
+				'Algo deu errado. Caso seja uma imagem comprimida, por favor confira se o arquivo não está corrompido.\n{{error}}',
+			validation:
+				'A gravação foi completada com sucesso, mas o Etcher detectou potenciais problemas de corrupção ao ler a imagem na unidade. \n\nPor favor considere gravar a imagem em uma unidade diferente.',
+			openError:
+				'Algo deu errado ao abrir {{source}}.\n\nErro: {{error}}',
+			flashError: 'Algo deu errado ao gravar {{image}} {{targets}}.',
+			unplug:
+				"Parece que o Etcher perdeu acesso à unidade. Ela foi desplugada acidentalmente?\n\nÀs vezes esse erro é causado por leitores defeituosos que não fornecem um acesso estável à unidade.",
+			cannotWrite:
+				'Parece que o Etcher não é capaz de gravar neste local da unidade. Esse erro é geralmente causado por unidades, leitores ou portas defeituosas. \n\nPor favor, tente novamente com outra unidade, leitor ou porta.',
+			childWriterDied:
+				'O processo de gravação terminou inesperadamente. Por favor, tente novamente e contate o time do Etcher se o problema persistir.',
+			badProtocol: 'Somente http:// e https:// URLs são suportadas.',
+		},
+		target: {
+			selectTarget: 'Selecione o alvo',
+			plugTarget: 'Plugue uma unidade alvo',
+			targets: 'Alvos',
+			change: 'Mudar',
+		},
+		source: {
+			useSourceURL: 'Usar Imagem URL',
+			auth: 'Autenticação',
+			username: 'Digite o nome de usuário',
+			password: 'Digite a senha',
+			unsupportedProtocol: 'Protocolo não suportado',
+			windowsImage: 'Possível imagem do Windows detectada',
+			partitionTable: 'Tabela de partição faltando',
+			errorOpen: 'Erro ao abrir a fonte',
+			fromFile: 'Flash a partir de um arquivo',
+			fromURL: 'Flash a partir de uma URL',
+			clone: 'Clonar unidade',
+			image: 'Imagem',
+			name: 'Nome: ',
+			path: 'Caminho: ',
+			selectSource: 'Escolher fonte',
+			plugSource: 'Plugue a unidade fonte',
+			osImages: 'Imagens de SO',
+			allFiles: 'Todos',
+			enterValidURL: 'Digite uma URL válida',
+		},
+		drives: {
+			name: 'Nome',
+			size: 'Tamanho',
+			location: 'Localização',
+			find: '{{length}} Encontrada',
+			select: 'Selecione {{select}}',
+			showHidden: 'Mostrar {{num}} oculto',
+			systemDriveDanger:
+				'Selecionar a unidade do seu sistema é perigoso a vai apagar sua unidade!',
+			openInBrowser: '`Etcher vai abrir {{link}} no seu navegador`',
+			changeTarget: 'Mudar alvo',
+			largeDriveWarning: 'Você está prestes a apagar uma unidade incomumente grande',
+			largeDriveWarningMsg:
+				'Tem certeza de que a unidade selecionada não é uma unidade de armazenamento?',
+			systemDriveWarning: "Você está prestes a apagar as unidades do seu computador.",
+			systemDriveWarningMsg:
+				'Tem certeza de que você quer fazer flash na sua unidade do sistema?',
+		},
+		flash: {
+			another: 'Fazer flash em outra',
+			target: 'Alvo',
+			location: 'Localização',
+			error: 'Erro',
+			flash: 'Flash',
+			flashNow: 'Flash!',
+			skip: 'Validação foi pulada',
+			moreInfo: 'Mais info',
+			speedTip:
+				'A velocidade é calculada dividindo o tamanho da imagem pelo tempo de flash.\nImagens de disco com partições ext fazem flash mais rápido pois podemos pular as partes não utilizadas.',
+			speed: 'Velocidade efetiva: {{speed}} MB/s',
+			speedShort: '{{speed}} MB/s',
+			eta: 'ETA: {{eta}}',
+			failedTarget: 'Alvos falhados',
+			failedRetry: 'Tentar alvos falhados novamente',
+			flashFailed: 'Flash Falhou.',
+			flashCompleted: 'Flash Completado!',
+		},
+		settings: {
+			errorReporting:
+				'Relate anonimamente erros e estatísticas de uso para balena.io',
+			autoUpdate: 'Auto-updates habilitados',
+			settings: 'Configurações',
+			systemInformation: 'Informações do sistema',
+			trimExtPartitions:
+				'Corte o espaço não alocado em imagens brutas (em partições do tipo ext)',
+		},
+		menu: {
+			edit: 'Editar',
+			view: 'Visualizar',
+			devTool: 'Alternar opções de desenvolvedor',
+			window: 'Janela',
+			help: 'Ajuda',
+			pro: 'Etcher Pro',
+			website: 'Etcher Website',
+			issue: 'Relatar um erro',
+			about: 'Sobre o Etcher',
+			hide: 'Ocultar o Etcher',
+			hideOthers: 'Ocultar outros',
+			unhide: 'Exibir todos',
+			quit: 'Sair do Etcher',
+		},
+	},
+};
+
+export default translation;
