@@ -27,7 +27,7 @@ support:
 - The operating system you're running Etcher in.
 
 - Relevant logging output, if any, from DevTools, which you can open by
-  pressing `Ctrl+Shift+I` or `Cmd+Alt+I` depending on your platform.
+  pressing `Ctrl+Shift+I` or `Cmd+Option+I` depending on your platform.
 
 GitHub
 ------
