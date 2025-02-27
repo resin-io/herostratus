@@ -38,7 +38,7 @@ const config: ForgeConfig = {
 			process.platform === 'linux' ? 'balena-etcher' : 'balenaEtcher',
 		appBundleId: 'io.balena.etcher',
 		appCategoryType: 'public.app-category.developer-tools',
-		appCopyright: 'Copyright 2016-2023 Balena Ltd',
+		appCopyright: 'Copyright 2016-2024 Balena Ltd',
 		darwinDarkModeSupport: true,
 		protocols: [{ name: 'etcher', schemes: ['etcher'] }],
 		extraResource: [
