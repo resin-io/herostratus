@@ -7,7 +7,7 @@ flashing an SDCard or USB drive is a pleasant and safe experience. It protects
 you from accidentally writing to your hard-drives, ensures every byte of data
 was written correctly, and much more. It can also directly flash Raspberry Pi devices that support [USB device boot mode](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#usb-device-boot-mode).
 
-[![Current Release](https://img.shields.io/github/release/balena-io/etcher.svg?style=flat-square)](https://balena.io/etcher)
+[![Latest Releases](https://img.shields.io/github/release/balena-io/etcher.svg?style=flat-square)](https://balena.io/etcher)
 [![License](https://img.shields.io/github/license/balena-io/etcher.svg?style=flat-square)](https://github.com/balena-io/etcher/blob/master/LICENSE)
 [![Balena.io Forums](https://img.shields.io/discourse/https/forums.balena.io/topics.svg?style=flat-square&label=balena.io%20forums)](https://forums.balena.io/c/etcher)
 
@@ -30,7 +30,7 @@ installers for all supported operating systems.
 
 #### Debian and Ubuntu based Package Repository (GNU/Linux x86/x64)
 
-Package for Debian and Ubuntu can be downloaded from the [Github release page](https://github.com/balena-io/etcher/releases/)
+Package for Debian and Ubuntu can be downloaded from the [Github release page](https://github.com/balena-io/etcher/releases/latest/)
 
 ##### Install .deb file using apt
 
@@ -48,7 +48,7 @@ Package for Debian and Ubuntu can be downloaded from the [Github release page](h
 
 ##### Yum
 
-Package for Fedora-based and Redhat can be downloaded from the [Github release page](https://github.com/balena-io/etcher/releases/)
+Package for Fedora-based and Redhat can be downloaded from the [Github release page](https://github.com/balena-io/etcher/releases/latest/)
 
 1. Install using yum
 
