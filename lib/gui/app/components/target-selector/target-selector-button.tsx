@@ -150,6 +150,7 @@ export function TargetSelectorButton(props: TargetSelectorProps) {
 			tabIndex={targets.length > 0 ? -1 : 2}
 			disabled={props.disabled}
 			onClick={props.openDriveSelector}
+			data-testid="select-target-button"
 		>
 			{i18next.t('target.selectTarget')}
 		</StepButton>

@@ -46,9 +46,56 @@ runs:
       with:
         python-version: '3.11'
 
+    - name: Setup Virtual Drive on MacOS
+      if: runner.os == 'macOS'
+      shell: bash
+      run: |
+        hdiutil create -size 4096m -layout NONE -o virtual_test_disk.dmg
+        virtual_path=$(hdiutil attach -nomount virtual_test_disk.dmg)
+        echo "TARGET_DRIVE=${virtual_path}" >> $GITHUB_ENV
+        echo "ETCHER_INCLUDE_VIRTUAL_DRIVES=1" >> $GITHUB_ENV
+
+    - name: Setup Virtual Drive on Linux
+      if: runner.os == 'Linux'
+      shell: bash
+      run: |
+        dd if=/dev/zero of=virtual_test_disk.img bs=1M count=4096
+        virtual_path=$(sudo losetup -f --show virtual_test_disk.img)
+        echo "TARGET_DRIVE=${virtual_path}" >> $GITHUB_ENV
+
+    - name: Setup Virtual Drive on Windows
+      if: runner.os == 'Windows'
+      shell: pwsh
+      run: |
+        fsutil file createnew virtual_test_disk.img 4294967296
+
+        # Use DiskPart to attach and list volumes
+        $diskpartScript = @"
+          SELECT VDISK FILE=virtual_test_disk.img
+          ATTACH VDISK
+          LIST VOLUME
+        "@
+
+        diskpart /s $diskpartScript | Out-File -FilePath diskpart_output.txt -Encoding UTF8        
+        
+        # Extract the volume information from the DiskPart output
+        $diskpartOutput = Get-Content -Path diskpart_output.txt
+        $driveLine = $diskpartOutput | Select-String -Pattern "virtual_test_disk.img"
+    
+        # Extract drive letter
+        $driveLetter = $null
+        if ($driveLine) {
+          $tokens = $driveLine -split "\s+"
+          $driveLetter = $tokens[2]
+        }
+        
+        echo "TARGET_DRIVE=!drive_letter!:\\" >> %GITHUB_ENV%
+
     - name: Test release
       shell: bash
       run: |
+        # Build and Test release
+
         ## FIXME: causes issues with `xxhash` which tries to load a debug build which doens't exist and cannot be compiled
         # if [[ '${{ inputs.VERBOSE }}' =~ on|On|Yes|yes|true|True ]]; then
         #   export DEBUG='electron-forge:*,sidecar'
@@ -63,8 +110,17 @@ runs:
 
         npm run lint
         npm run package
-        npm run wdio # test stage, note that it requires the package to be done first
+        
+        # tests; note that they required `package` to run before
+        npm run wdio
 
+        # e2e suite requires administrative privileges
+        if [[ '${{ runner.os }}' == 'Windows' ]]; then
+          npm run wdio-e2e
+        else 
+          sudo TARGET_DRIVE=${{ env.TARGET_DRIVE }} ETCHER_INCLUDE_VIRTUAL_DRIVES=1 npm run wdio-e2e
+        fi
+        
       env:
         # https://www.electronjs.org/docs/latest/api/environment-variables
         ELECTRON_NO_ATTACH_CONSOLE: 'true'

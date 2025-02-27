@@ -104,7 +104,9 @@ export class ProgressButton extends React.PureComponent<ProgressButtonProps> {
 						}}
 					>
 						<Flex>
-							<Txt color="#fff">{status}&nbsp;</Txt>
+							<Txt data-testid="flash-status" color="#fff">
+								{status}&nbsp;
+							</Txt>
 							<Txt color={colors[type]}>{position}</Txt>
 						</Flex>
 						{type && (
@@ -125,6 +127,7 @@ export class ProgressButton extends React.PureComponent<ProgressButtonProps> {
 				warning={warning}
 				onClick={this.props.callback}
 				disabled={this.props.disabled}
+				data-testid={'flash-now-button'}
 				style={{
 					marginTop: 30,
 				}}

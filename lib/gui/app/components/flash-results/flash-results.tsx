@@ -163,7 +163,7 @@ export function FlashResults({
 					/>
 					<Txt>{middleEllipsis(image, 24)}</Txt>
 				</Flex>
-				<Txt fontSize={24} color="#fff" mb="17px">
+				<Txt data-testid="flash-results" fontSize={24} color="#fff" mb="17px">
 					{allFailed
 						? i18next.t('flash.flashFailed')
 						: i18next.t('flash.flashCompleted')}

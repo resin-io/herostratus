@@ -20,7 +20,9 @@
     "package": "electron-forge package",
     "start": "electron-forge start",
     "make": "electron-forge make",
-    "wdio": "xvfb-maybe wdio run ./wdio.conf.ts"
+    "wdio": "xvfb-maybe wdio run ./wdio.conf.ts --suite gui --suite shared",
+    "wdio:e2e": "xvfb-maybe wdio run ./wdio.conf.ts --suite e2e",
+    "wdio:all": "xvfb-maybe wdio run ./wdio.conf.ts --suite gui --suite shared --suite e2e"
   },
   "husky": {
     "hooks": {

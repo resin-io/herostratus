@@ -25,6 +25,8 @@ import { geteuid, platform } from 'process';
 const adapters: Adapter[] = [
 	new BlockDeviceAdapter({
 		includeSystemDrives: () => true,
+		includeVirtualDrives: () =>
+			process.env.ETCHER_INCLUDE_VIRTUAL_DRIVES === '1',
 	}),
 ];
 

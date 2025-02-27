@@ -121,3 +121,9 @@ secrets/WINDOWS_SIGNING.pfx
 #local development
 .yalc
 yalc.lock
+
+# Test assets
+virtual_test_disk.dmg
+virtual_test_disk.img
+virtual_test_disk.vhd
+screenshots/

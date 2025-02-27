@@ -165,6 +165,7 @@ const URLSelector = ({
 			cancel={cancel}
 			primaryButtonProps={{
 				disabled: loading || !imageURL,
+				'data-testid': 'source-url-ok-button',
 			}}
 			action={loading ? <Spinner /> : i18next.t('ok')}
 			done={async () => {
@@ -186,6 +187,7 @@ const URLSelector = ({
 					</Txt>
 					<Input
 						value={imageURL}
+						data-testid="source-url-input"
 						placeholder={i18next.t('source.enterValidURL')}
 						type="text"
 						onChange={(evt: React.ChangeEvent<HTMLInputElement>) =>
@@ -671,6 +673,7 @@ export class SourceSelector extends React.Component<
 								disabled={this.state.imageSelectorOpen}
 								primary={this.state.defaultFlowActive}
 								key="Flash from file"
+								data-testid="flash-from-file"
 								flow={{
 									onClick: () => this.openImageSelector(),
 									label: i18next.t('source.fromFile'),
@@ -681,6 +684,7 @@ export class SourceSelector extends React.Component<
 							/>
 							<FlowSelector
 								key="Flash from URL"
+								data-testid="flash-from-url"
 								flow={{
 									onClick: () => this.openURLSelector(),
 									label: i18next.t('source.fromURL'),

@@ -419,6 +419,7 @@ export class DriveSelector extends React.Component<
 					primary: !showWarnings,
 					warning: showWarnings,
 					disabled: !hasAvailableDrives(),
+					'data-testid': 'validate-target-button',
 				}}
 				{...props}
 			>
