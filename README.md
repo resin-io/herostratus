@@ -46,16 +46,17 @@ Package for Debian and Ubuntu can be downloaded from the [Github release page](h
 
 #### Redhat (RHEL) and Fedora-based Package Repository (GNU/Linux x86/x64)
 
-##### Yum
+##### Install using yum
 
 Package for Fedora-based and Redhat can be downloaded from the [Github release page](https://github.com/balena-io/etcher/releases/)
-
-1. Install using yum
 
 ```sh
    sudo yum localinstall balena-etcher-***.x86_64.rpm
 ```
-
+##### Uninstall
+  ```sh
+   sudo yum remove balena-etcher
+```
 #### Arch/Manjaro Linux (GNU/Linux x64)
 
 Etcher is offered through the Arch User Repository and can be installed on both Manjaro and Arch systems. You can compile it from the source code in this repository using [`balena-etcher`](https://aur.archlinux.org/packages/balena-etcher/). The following example uses a common AUR helper to install the latest release:
