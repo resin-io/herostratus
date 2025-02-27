@@ -86,17 +86,15 @@ you want to learn more.
 Running on Wayland
 ------------------
 
-Electron is based on Gtk2, which can't run natively on Wayland. Fortunately,
-the [XWayland Server][xwayland] provides backwards compatibility to run *any* X
-client on Wayland, including Etcher.
+You can run Etcher on Wayland by passing command line flags like so:
 
-This usually works out of the box on mainstream GNU/Linux distributions that
-properly support Wayland. If it doesn't, make sure the `xwayland.so` module is
-being loaded by declaring it in your [weston.ini]:
-
+```sh
+balena-etcher --enable-features=WaylandWindowDecorations --ozone-platform=wayland
 ```
-[core]
-modules=xwayland.so
+To make these changes permanent to the desktop entry, run these commands in your terminal:
+```sh
+cp /usr/share/applications/balena-etcher.desktop ~/.local/share/applications
+sed -i 's|^Exec=/opt/balenaEtcher/balena-etcher %U$|Exec=/opt/balenaEtcher/balena-etcher --enable-features=WaylandWindowDecorations --ozone-platform=wayland %U|' ~/.local/share/applications/balena-etcher.desktop
 ```
 
 Runtime GNU/Linux dependencies
