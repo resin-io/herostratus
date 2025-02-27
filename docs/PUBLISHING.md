@@ -27,11 +27,12 @@ packaging for OS X.
 
 ### Windows
 
-1. Get access to our code signing certificate and decryption key as a balena.io
-employee by asking for it from the relevant people.
+Since 2023, Microsoft requires all signing key to be store on hardware modules.
+Because of this, we now use a cloud-hsm product to sign Etcher.
+The required keys are set by balena operation on the Github CI.
 
-2. Place the certificate in the root of the Etcher repository naming it
-`certificate.p12`.
+The application will be signed automatically using the proper procss when
+packaging for Windows.
 
 Packaging
 ---------
@@ -51,9 +52,7 @@ The resulting artifacts can be found in `out/make`.
 Publishing to Cloudfront
 ---------------------
 
-We publish GNU/Linux Debian packages to [Cloudfront][cloudfront].
-
-Log in to cloudfront and upload the `rpm` and `deb` files.
+We currently don't publish GNU/Linux Debian or Fedora packages.
 
 Publishing to Homebrew Cask
 ---------------------------
@@ -67,16 +66,10 @@ Publishing to Homebrew Cask
 Announcing
 ----------
 
-Post messages to the [Etcher forum][balena-forum-etcher] announcing the new version
-of Etcher, and including the relevant section of the Changelog.
-
-[aws-cli]: https://aws.amazon.com/cli
-[cloudfront]: https://cloudfront.com
 [etcher-cask-file]: https://github.com/caskroom/homebrew-cask/blob/master/Casks/balenaetcher.rb
 [homebrew-cask]: https://github.com/caskroom/homebrew-cask
-[balena-forum-etcher]: https://forums.balena.io/c/etcher
 [github-releases]: https://github.com/balena-io/etcher/releases
 
 Updating EFP / Success-Banner
 -----------------------------
-Etcher Featured Project is automatically run based on an algorithm which promoted projects from the balena marketplace which have been contributed by the community, the algorithm prioritises projects which give uses the best experience. Editing both EFP and the Etcher Success-Banner can only be done by someone from balena, instruction are on the [Etcher-EFP repo (private)](https://github.com/balena-io/etcher-efp)
+Etcher Featured Project is automatically run based on an algorithm which promoted projects from the balena marketplace which have been contributed by the community, the algorithm prioritises projects which give users the best experience. Editing both EFP and the Etcher Success-Banner can only be done by someone from balena, instruction are on the [Etcher-EFP repo (private)](https://github.com/balena-io/etcher-efp)

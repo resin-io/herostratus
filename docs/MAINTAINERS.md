@@ -12,7 +12,7 @@ Releasing
 - **pre-release** (default): A continues snapshot of current master, made by the CI services
 - **release**: Full releases
 
-Draft release is created from each PR, tagged with the branch name.
+Draft release is created from each PR, tagged with the branch name, only visible by balena team members.
 All merged PR will generate a new tag/version as a *pre-release*.
 Mark the pre-release as final when it is necessary, then distribute the packages in alternative channels as necessary.
 
@@ -32,9 +32,8 @@ Mark the pre-release as final when it is necessary, then distribute the packages
 #### Publishing
 
 - [Publish release draft on GitHub](https://github.com/balena-io/etcher/releases)
-- [Post release note to forums](https://forums.balena.io/c/etcher)
 - [Submit Windows binaries to Symantec for whitelisting](#submitting-binaries-to-symantec)
-- [Update the website](https://github.com/balena-io/etcher-homepage)
+- [Update the website](https://balena.io/etcher)
 - Wait 2-3 hours for analytics (Sentry, Amplitude) to trickle in and check for elevated error rates, or regressions
 - If regressions arise; pull the release, and release a patched version, else:
 - [Upload deb & rpm packages to Cloudfront](#uploading-packages-to-cloudfront)
@@ -71,34 +70,15 @@ npm run make
 
 Our CI will appropriately sign artifacts for macOS and some Windows targets.
 
-
-### Uploading packages to Cloudfront
-
-Log in to cloudfront and upload the `rpm` and `deb` files.
-
 ### Dealing with a Problematic Release
 
 There can be times where a release is accidentally plagued with bugs. If you
 released a new version and notice the error rates are higher than normal, then
 revert the problematic release as soon as possible, until the bugs are fixed.
 
-You can revert a version by deleting its builds from the S3 bucket and Bintray.
-Refer to the `Makefile` for the up to date information about the S3 bucket
-where we push builds to, and get in touch with the balena.io operations team to
-get write access to it.
-
 The Etcher update notifier dialog and the website only show the a certain
 version if all the expected files have been uploaded to it, so deleting a
 single package or two is enough to bring down the whole version.
-
-Use the following command to delete files from S3:
-
-```bash
-aws s3api delete-object --bucket <bucket name> --key <file name>
-```
-
-The Bintray dashboard provides an easy way to delete a version's files.
-
 
 ### Submitting binaries to Symantec
 

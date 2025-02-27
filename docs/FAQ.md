@@ -41,9 +41,9 @@ To solve these kinds of problems, we've collected [a list of fail-proof methods]
 
 Etcher requires an available [polkit authentication agent](https://wiki.archlinux.org/index.php/Polkit#Authentication_agents) in your system in order to show a secure password prompt dialog to perform elevation. Make sure you have one installed for the desktop environment of your choice.
 
-## May I run Etcher in older macOS versions?
+## Which OS versions are supported by Etcher?
 
-Etcher GUI is based on the [Electron](http://electron.atom.io/) framework, [which only supports macOS 10.10 and newer versions](https://github.com/electron/electron/blob/master/docs/tutorial/support.md#supported-platforms).
+Etcher GUI is based on the [Electron](http://electron.atom.io/) framework, [see their list of supported OS versions]. Note that as the time of writing, Windows 10, macOS Catalina and Ubuntu 18.04 are the lowest supported versions.
 
 ## Can I use the Flash With Etcher button on my site?
 

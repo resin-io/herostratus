@@ -11,12 +11,14 @@ This is a non exhaustive list of the major frameworks, libraries, and other
 technologies used in Etcher that you should become familiar with:
 
 - [Electron][electron]
+- [Pkg][pkg]
 - [NodeJS][nodejs]
 - [Redux][redux]
 - [ImmutableJS][immutablejs]
+- [WS][ws]
 - [Sass][sass]
 - [Mocha][mocha]
-- [JSDoc][jsdoc]
+- [wdio][wdio]
 
 Module architecture
 -------------------
@@ -49,7 +51,18 @@ a system drive.
 This is the *"main repository"*, from which you're reading this from, which is
 basically the front-end and glue for all previously listed projects.
 
-Summary
+GUI & Util
+----------
+Etcher is split in two executables:
+- GUI (Electron/React/Redux/Rendition)
+- Util (Pkg/Etcher-sdk)
+
+The `GUI` is handling all the interaction with the user and will spawn the `Util`
+to handle the scanning and flashing process.
+
+`Util` will start a local Websocket server that `GUI` will connect to.
+
+Contrib
 -------
 
 We always welcome contributions to Etcher as well as our documentation. If you
@@ -67,4 +80,6 @@ be documented instead!
 [immutablejs]: http://facebook.github.io/immutable-js/
 [sass]: http://sass-lang.com
 [mocha]: http://mochajs.org
-[jsdoc]: http://usejsdoc.org
+[pkg]: https://github.com/yao-pkg/pkg
+[wdio]: https://webdriver.io
+[ws]: https://www.npmjs.com/package/ws

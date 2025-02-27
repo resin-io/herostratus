@@ -17,21 +17,11 @@ Developing
 
 #### Common
 
-- [NodeJS](https://nodejs.org) (at least v16.11)
-- [Python 3](https://www.python.org)
-- [jq](https://stedolan.github.io/jq/)
-- [curl](https://curl.haxx.se/)
-- [npm](https://www.npmjs.com/)
-
-```sh
-pip install -r requirements.txt
-```
-
-You might need to run this with `sudo` or administrator permissions.
+- [NodeJS](https://nodejs.org) (check the required `enginge` version in `package.json`)
+- [Node-gyp](https://github.com/nodejs/node-gyp?tab=readme-ov-file#installation) toolchain (see their docs for your system requirements)
 
 #### Windows
 
-- [NSIS v2.51](http://nsis.sourceforge.net/Main_Page) (v3.x won't work)
 - Either one of the following:
   - [Visual C++ 2019 Build Tools](https://visualstudio.microsoft.com/vs/features/cplusplus/) containing standalone compilers, libraries and scripts
   - The [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools#windows-build-tools) should be installed along with NodeJS
@@ -39,18 +29,9 @@ You might need to run this with `sudo` or administrator permissions.
     **NOTE:** Visual Studio doesn't install C++ by default. You have to rerun the
     setup, select "Modify" and then check `Visual C++ -> Common Tools for Visual
     C++` (see http://stackoverflow.com/a/31955339)
-- [MinGW](http://www.mingw.org)
 
 You might need to `npm config set msvs_version 2019` for node-gyp to correctly detect
 the version of Visual Studio you're using (in this example VS2019).
-
-The following MinGW packages are required:
-
-- `msys-make`
-- `msys-unzip`
-- `msys-zip`
-- `msys-bash`
-- `msys-coreutils`
 
 #### macOS
 
@@ -62,6 +43,8 @@ as well.
 #### Linux
 
 - `libudev-dev` for libusb (for example install with `sudo apt install libudev-dev`, or on fedora `systemd-devel` contains the required package)
+
+- Check the `hostDepencies` in `package.json` for the requirements for `debian`, you might need to adapt the package list for other distribution.
 
 ### Cloning the project
 
@@ -84,17 +67,18 @@ Testing
 
 To run the test suite, run the following command:
 
+For the unit tests
 ```sh
-npm test
+npm wdio --suite gui --suite shared
 ```
 
-Given the nature of this application, not everything can be unit tested. For
-example:
+For the e2e tests you need: 
+- to provide a test device (`TARGET_DRIVE`), this can be a virtual drive (check the `.github/actions/test/action.yml` for example on how to create the virtual drives for differnet OS). If you use a virtual drive on Mac, you'll need to set `ETCHER_INCLUDE_VIRTUAL_DRIVES` in the ENV.
+- to run with administator privileges (as the request cannot be automated). Use `sudo` (or `runas` on windows)
 
-- The writing operating on real raw devices.
-- Platform inconsistencies.
-- Style changes.
-- Artwork.
+```sh
+sudo npm wdio --suite e2e
+```
 
 We encourage our contributors to test the application on as many operating
 systems as they can before sending a pull request.
@@ -111,6 +95,7 @@ Updating a dependency
 ---------------------
 
 - Install new version of dependency using npm
+- Run all tests (including e2e)
 - Commit *both* `package.json` and `npm-shrinkwrap.json`.
 
 Diffing Binaries
@@ -145,6 +130,12 @@ Sending a pull request
 ----------------------
 
 When sending a pull request, consider the following guidelines:
+
+- Double check that your commits follows the [COMMIT-GUIDELINES.md][COMMIT-GUIDELINES]
+
+- Run the linter & prettifier with `npm run prettify`
+
+- Check that you're accidentally pushing some unrelated changes (i.e. formating, etc.)
 
 - Write a concise commit message explaining your changes.
 

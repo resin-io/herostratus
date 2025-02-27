@@ -4,6 +4,8 @@ Manual Testing
 This document describes a high-level script of manual tests to check for. We
 should aim to replace items on this list with automated Spectron test cases.
 
+Note that this should eventually be automated and move to the e2e tests.
+
 Image Selection
 ---------------
 
