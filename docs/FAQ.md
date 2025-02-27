@@ -21,7 +21,7 @@ Refer to [the following message from Ubuntu's mailing list](https://lists.ubuntu
 ## How do I run Etcher on Wayland?
 
 The XWayland Server provides backwards compatibility to run any X client on Wayland, including Etcher.
-This usually works out of the box on mainstream GNU/Linux distributions that properly support Wayland. If it doesn't, make sure the xwayland.so module is being loaded by declaring it in your [weston.ini](http://manpages.ubuntu.com/manpages/wily/man5/weston.ini.5.html):
+This usually works out of the box on mainstream GNU/Linux distributions that properly support Wayland. If it doesn't, make sure the xwayland.so module is being loaded by declaring it in your [weston.ini](https://manpages.ubuntu.com/manpages/noble/en/man5/weston.ini.5.html):
 
 ```
 [core]
@@ -43,10 +43,10 @@ Etcher requires an available [polkit authentication agent](https://wiki.archlinu
 
 ## May I run Etcher in older macOS versions?
 
-Etcher GUI is based on the [Electron](http://electron.atom.io/) framework, [which only supports macOS 10.10 and newer versions](https://github.com/electron/electron/blob/master/docs/tutorial/support.md#supported-platforms).
+Etcher GUI is based on the [Electron](https://www.electronjs.org/) framework, [which only supports macOS 10.10 and newer versions](https://github.com/electron/electron/blob/main/README.md#platform-support).
 
 ## Can I use the Flash With Etcher button on my site?
 
 You can use the Flash with Etcher button on your site or blog, if you have an OS that you want your users to be able to easily flash using Etcher, add the following code where you want to button to be:
 
-`<a href="https://efp.balena.io/open-image-url?imageUrl=<your image URL>"><img src="http://balena.io/flash-with-etcher.png" /></a>`
+`<a href="https://efp.balena.io/open-image-url?imageUrl=<your image URL>"><img src="https://balena.io/flash-with-etcher.png" alt="flash with etcher"></a>`

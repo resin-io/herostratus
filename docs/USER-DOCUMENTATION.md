@@ -210,15 +210,15 @@ Etcher GUI is based on the [Electron][electron] framework, [which only supports
 macOS 10.10 (Yosemite) and newer versions][electron-supported-platforms].
 
 [balena.io]: https://balena.io
-[appimage]: http://appimage.org
+[appimage]: https://appimage.org
 [xwayland]: https://wayland.freedesktop.org/xserver.html
-[weston.ini]: http://manpages.ubuntu.com/manpages/wily/man5/weston.ini.5.html
+[weston.ini]: https://manpages.ubuntu.com/manpages/noble/man5/weston.ini.5.html
 [diskpart]: https://technet.microsoft.com/en-us/library/cc770877(v=ws.11).aspx
 [electron]: https://electronjs.org/
 [electron-supported-platforms]: https://electronjs.org/docs/tutorial/support#supported-platforms
 [publishing]: https://github.com/balena-io/etcher/blob/master/docs/PUBLISHING.md
 [windows-usb-tool]: https://www.microsoft.com/en-us/download/windows-usb-dvd-download-tool
-[rufus]: https://rufus.akeo.ie
+[rufus]: https://rufus.ie
 [unetbootin]: https://unetbootin.github.io
 [windows-iot-dashboard]: https://developer.microsoft.com/en-us/windows/iot/downloads
 [woeusb]: https://github.com/slacka/WoeUSB

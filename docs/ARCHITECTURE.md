@@ -59,12 +59,12 @@ since fresh eyes could help unveil things that we take for granted, but should
 be documented instead!
 
 [lego-blocks]: https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328
-[exit-codes]: https://github.com/balena-io/etcher/blob/master/lib/shared/exit-codes.js
+[exit-codes]: https://github.com/balena-io/etcher/blob/master/lib/shared/exit-codes.ts
 [gui-dir]: https://github.com/balena-io/etcher/tree/master/lib/gui
-[electron]: http://electron.atom.io
+[electron]: https://www.electronjs.org
 [nodejs]: https://nodejs.org
-[redux]: http://redux.js.org
-[immutablejs]: http://facebook.github.io/immutable-js/
-[sass]: http://sass-lang.com
-[mocha]: http://mochajs.org
-[jsdoc]: http://usejsdoc.org
+[redux]: https://redux.js.org
+[immutablejs]: https://immutable-js.com
+[sass]: https://sass-lang.com
+[mocha]: https://mochajs.org
+[jsdoc]: https://jsdoc.app
