@@ -27,12 +27,12 @@ approach"][lego-blocks].
 
 This has the advantage of allowing other applications to re-use logic we
 implemented for Etcher in their own project, even for things we didn't expect,
-which leads to users benefitting from what we've built, and we benefitting from
+which leads to users benefiting from what we've built, and we're benefiting from
 user's bug reports, suggestions, etc, as an indirect way to make Etcher better.
 
 The fact that low-level details are scattered around many different modules can
 make it challenging for a new contributor to wrap their heads around the
-project as a whole, and get a clear high level view of how things work or where
+project as a whole, and get a clear high-level view of how things work or where
 to submit their work or bug reports.
 
 These are the main Etcher components, in a nutshell:

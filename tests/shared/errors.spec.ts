@@ -40,7 +40,7 @@ describe('Shared: Errors', function () {
 		it('should return a generic error message if the error is an empty object', function () {
 			const error = {};
 			// @ts-ignore
-			expect(errors.getTitle(error)).to.equal('An error ocurred');
+			expect(errors.getTitle(error)).to.equal('An error occurred');
 		});
 
 		it('should return the error message', function () {
@@ -129,29 +129,29 @@ describe('Shared: Errors', function () {
 			const error = new Error();
 			// @ts-ignore
 			error.code = '';
-			expect(errors.getTitle(error)).to.equal('An error ocurred');
+			expect(errors.getTitle(error)).to.equal('An error occurred');
 		});
 
 		it('should not display a blank string error code', function () {
 			const error = new Error();
 			// @ts-ignore
 			error.code = '   ';
-			expect(errors.getTitle(error)).to.equal('An error ocurred');
+			expect(errors.getTitle(error)).to.equal('An error occurred');
 		});
 
 		it('should return a generic error message if no information was found', function () {
 			const error = new Error();
-			expect(errors.getTitle(error)).to.equal('An error ocurred');
+			expect(errors.getTitle(error)).to.equal('An error occurred');
 		});
 
 		it('should return a generic error message if no code and the message is empty', function () {
 			const error = new Error('');
-			expect(errors.getTitle(error)).to.equal('An error ocurred');
+			expect(errors.getTitle(error)).to.equal('An error occurred');
 		});
 
 		it('should return a generic error message if no code and the message is blank', function () {
 			const error = new Error('   ');
-			expect(errors.getTitle(error)).to.equal('An error ocurred');
+			expect(errors.getTitle(error)).to.equal('An error occurred');
 		});
 
 		it('should rephrase an ENOENT error', function () {

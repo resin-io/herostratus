@@ -99,7 +99,7 @@ export function getTitle(error: ErrorWithPath): string {
 		return `Error code: ${code}`;
 	}
 
-	return 'An error ocurred';
+	return 'An error occurred';
 }
 
 /**

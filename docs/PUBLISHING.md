@@ -9,7 +9,7 @@ Release Types
 
 Etcher supports **pre-release** and **final** release types as does Github. Each is
 published to Github releases.
-The release version is generated automatically from the commit messasges.
+The release version is generated automatically from the commit messages.
 
 Signing
 -------
