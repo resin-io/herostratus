@@ -17,6 +17,7 @@ was written correctly, and much more. It can also directly flash Raspberry Pi de
 
 ## Supported Operating Systems
 
+- Android; most distros
 - Linux; most distros; Intel 64-bit.
 - Windows 10 and later; Intel 64-bit.
 - macOS 10.13 (High Sierra) and later; both Intel and Apple Silicon.
